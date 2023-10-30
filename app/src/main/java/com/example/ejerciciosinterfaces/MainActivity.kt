@@ -34,8 +34,9 @@ class MainActivity : AppCompatActivity() {
     private fun abrirPizzeria(){
         val intent = Intent(this, Pizzeria::class.java)
         startActivity(intent)
-
     }
+
+
 
     private fun initListeners() {
         binding.btnEjemplo1.setOnClickListener {

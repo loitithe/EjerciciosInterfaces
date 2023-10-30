@@ -1,26 +1,26 @@
 package com.example.ejerciciosinterfaces
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.os.bundleOf
-import androidx.fragment.app.add
-import androidx.fragment.app.commit
-import com.example.ejerciciosinterfaces.PizzeriaFragment.Companion.PARAM1
-import com.example.ejerciciosinterfaces.PizzeriaFragment.Companion.PARAM2
+import android.widget.Toast
+import com.example.ejerciciosinterfaces.databinding.ActivityPizzeriaBinding
+import com.google.android.material.snackbar.Snackbar
 
 class Pizzeria : AppCompatActivity() {
+    private lateinit var binding: ActivityPizzeriaBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pizzeria)
-        // comprobacion que es la primera vez que se crea el fragment
-        if (savedInstanceState==null){
-            val bundle= bundleOf(PARAM1 to "Rodrigo",
-                PARAM2 to "Guido")
-            supportFragmentManager.commit {
-                // obligatorio!! performance
-                setReorderingAllowed(true)
-                add<PizzeriaFragment>(R.id.fragmentContainer,args=bundle)
-            }
+        binding = ActivityPizzeriaBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+        binding.btnSalir.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this,"btnSalir",Toast.LENGTH_SHORT).show()
         }
+
+
     }
 }
