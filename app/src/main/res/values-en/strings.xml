@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InterfacesExercises</string>
+    <string name="sumar">Plus</string>
+    <string name="restar">Substract</string>
+    <string name="pizzeria">Pizza shop</string>
+    <string name="calcular">Calculate</string>
+    <string name="Numero1">Number 1</string>
+    <string name="Numero2">Number 2</string>
+    <string name="Ejercicio1">Exercise 1</string>
+    <string name="hello_blank_fragment">Hello blank Fragment</string>
+    <string name="click">Click</string>
+    <string name="Pizzas">Pizzas</string>
+    <string name="Bebidas">Drinks</string>
+    <string name="Complementos">Starters</string>
+    <string name="VerPedido">" See order"</string>
+    <string name="Salir">Exit</string>
+</resources>
