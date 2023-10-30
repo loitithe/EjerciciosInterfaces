@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_red"
+    tools:context=".PizzeriaFragment">
+
+    <Button
+        android:id="@+id/btnPizzas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="244dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/Pizzas"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnComplementos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="@string/Complementos"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPizzas" />
+
+    <Button
+        android:id="@+id/btnBebidas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="@color/white"
+        android:text="@string/Bebidas"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnComplementos" />
+
+    <Button
+        android:id="@+id/btnVerPedido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+
+        android:text="@string/VerPedido"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/btnSalir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBebidas"
+        app:layout_constraintVertical_bias="0.834" />
+
+    <Button
+
+        android:id="@+id/btnSalir"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        app:layout_constraintVertical_bias="0.1"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Salir" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
