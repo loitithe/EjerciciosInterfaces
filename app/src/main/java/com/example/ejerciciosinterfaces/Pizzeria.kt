@@ -1,11 +1,12 @@
 package com.example.ejerciciosinterfaces
 
+import Articulo
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.ejerciciosinterfaces.adapter.PizzeriaAdapter
 import com.example.ejerciciosinterfaces.databinding.ActivityPizzeriaBinding
-import com.google.android.material.snackbar.Snackbar
 
 class Pizzeria : AppCompatActivity() {
     private lateinit var binding: ActivityPizzeriaBinding
@@ -15,12 +16,29 @@ class Pizzeria : AppCompatActivity() {
         binding = ActivityPizzeriaBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        val intentOpciones = Intent(this, Lista_opciones::class.java)
+
         binding.btnSalir.setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            Toast.makeText(this,"btnSalir",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "btnSalir", Toast.LENGTH_SHORT).show()
         }
 
+        binding.btnPizzas.setOnClickListener {
 
+            intent.putExtra("opcionPizzas", 1)
+            startActivity(intent)
+        }
+
+        binding.btnBebidas.setOnClickListener {
+            intent.putExtra("opcionPizzas", 2)
+            startActivity(intent)
+        }
+
+        binding.btnComplementos.setOnClickListener {
+            intent.putExtra("opcionPizzas", 3)
+            startActivity(intent)
+        }
     }
+
 }
