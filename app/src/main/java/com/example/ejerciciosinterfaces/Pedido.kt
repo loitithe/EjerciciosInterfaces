@@ -19,7 +19,6 @@ class TipoArticulo {
 
 
     }
-
     public enum class Pizzas(val nombre:String,val precio: Float) {
         QuesoPepperoni("QuesoPepperoni",13.5f),
         Margarita("Margarita",10.2f),

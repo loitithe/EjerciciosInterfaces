@@ -35,8 +35,8 @@ class Ejemplo1 : AppCompatActivity() {
     }
 
     private fun sumar() {
-        val num1: Int = Integer.parseInt(viewBinding.num1.getText().toString())
-        val num2: Int = Integer.parseInt(viewBinding.num2.getText().toString())
+        val num1: Int = viewBinding.num1.getText().toString().toInt()
+        val num2: Int = viewBinding.num2.getText().toString().toInt()
         val resultado = num1 + num2
         viewBinding.tvResultado.text = resultado.toString()
 

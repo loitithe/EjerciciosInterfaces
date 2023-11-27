@@ -14,4 +14,15 @@
     <string name="Complementos">Entrantes</string>
     <string name="VerPedido">Ver pedido</string>
     <string name="Salir">Salir\t\t\t\t</string>
+    <string name="comprar">Comprar\n</string>
+    <string name="QuesoPeperoni"><![CDATA[Queso & Peperoni\n]]></string>
+    <string name="Margarita">Margarita\n</string>
+    <string name="Hawaiana">Hawaina\n</string>
+    <string name="Pollo">Pollo</string>
+    <string name="Napolitana">Napolitana</string>
+    <string name="QuatroQuesos">4 Quesos</string>
+    <string name="SalmónAhuQuesoCrema">Salmon ahumado c/Queso crema</string>
+    <string name="Carbonara">Carbonara\n</string>
+    <string name="Barbacoa">Barbacoa</string>
+    <string name="Calzone">Calzone</string>
 </resources>

@@ -39,6 +39,7 @@ class Lista_opciones : AppCompatActivity() {
                 Articulo(it, cantidad = null, ingredienteExtra = null)
             }
 
+
             else -> emptyList() // En caso de un valor no reconocido
         }
     }

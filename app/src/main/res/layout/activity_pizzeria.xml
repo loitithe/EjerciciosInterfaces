@@ -5,14 +5,15 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/light_blue"
-    tools:context=".PizzeriaFragment">
+    >
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnPizzas"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="244dp"
         android:backgroundTint="@color/white"
+
         android:text="@string/Pizzas"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
