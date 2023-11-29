@@ -11,98 +11,27 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    tools:context=".ListaCheckBox">
+    tools:context=".ListaCheckBox"
+    >
 
     <LinearLayout
-        android:layout_margin="30dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:gravity="center"
+
         android:id="@+id/linearVertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button_pedido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:background="@color/dark_blue"
-                    android:id="@+id/checkBox_QuesoPepperoni"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/QuesoPeperoni"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <CheckBox
-            android:id="@+id/checkBox_Margarita"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Margarita"
-            android:textColor="@color/white" />
-
-        <CheckBox
-            android:id="@+id/checkBox_Hawaiana"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Hawaiana"
-            android:textColor="@color/white" />
-
-        <CheckBox
-            android:id="@+id/checkBox_Pollo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Pollo"
-            android:textColor="@color/white" />
-
-        <CheckBox
-            android:id="@+id/checkBox_Napolitana"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Napolitana"
-            android:textColor="@color/white" />
-
-        <CheckBox
-            android:id="@+id/checkBox_SalmónAhuQuesoCrema"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/SalmónAhuQuesoCrema"
-            android:textColor="@color/white" />
-
-        <CheckBox
-            android:id="@+id/checkBox_Carbonara"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Carbonara"
-            android:textColor="@color/white" />
-
-        <CheckBox
-        android:id="@+id/checkBox_Barbacoa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Barbacoa"
-        android:textColor="@color/white" />
-
-        <CheckBox
-        android:id="@+id/checkBox_Calzone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Calzone"
-        android:textColor="@color/white" />
 
     </LinearLayout>
 
     <Button
+        android:textSize="22dp"
         android:layout_marginBottom="20dp"
         android:id="@+id/button_pedido"
         android:layout_width="match_parent"
