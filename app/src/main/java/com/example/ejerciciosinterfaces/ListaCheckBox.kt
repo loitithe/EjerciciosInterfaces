@@ -10,6 +10,7 @@ import android.widget.CheckBox
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.ejerciciosinterfaces.databinding.ActivityListaCheckBoxBinding
@@ -31,11 +32,11 @@ class ListaCheckBox : AppCompatActivity() {
     }
 
     fun init() {
-        val lista = Pizzas.values()
+        val lista = TipoArticulo.Pizzas.values()
         Log.i("checkbox", "tamaño " + lista.size.toString())
 
         val pizzas_layout = binding.linearVertical
-        for (pizza in Pizzas.values()) {
+        for (pizza in lista) {
             val cardView = CardView(this)
             val linearLayout = LinearLayout(this)
             linearLayout.orientation = LinearLayout.HORIZONTAL
@@ -60,9 +61,7 @@ class ListaCheckBox : AppCompatActivity() {
             )
 
             val deleteButton = ImageButton(this)
-            deleteButton.setOnClickListener{
-                actualizaTextViewCantidad(-1)
-            }
+
             deleteButton.setImageResource(android.R.drawable.ic_delete)
             deleteButton.layoutParams = LinearLayout.LayoutParams(
                 0,
@@ -92,9 +91,19 @@ class ListaCheckBox : AppCompatActivity() {
                 1f
             )
             addButton.setOnClickListener {
-                actualizaTextViewCantidad(+1)
+                if (checkBox.isChecked) {
+                    actualizaTextViewCantidad(cantidadTextView, +1)
+                } else {
+                    Toast.makeText(this, "Selecciona la pizza primero", Toast.LENGTH_SHORT).show()
+                }
             }
-
+            deleteButton.setOnClickListener{
+                if (checkBox.isChecked) {
+                    actualizaTextViewCantidad(cantidadTextView, -1)
+                } else {
+                    Toast.makeText(this, "Selecciona la pizza primero", Toast.LENGTH_SHORT).show()
+                }
+            }
             linearLayout.addView(checkBox)
             linearLayout.addView(textViewPrecio)
             linearLayout.addView(deleteButton)
@@ -117,21 +126,15 @@ class ListaCheckBox : AppCompatActivity() {
 
 }
 
-    private fun actualizaTextViewCantidad(i: Int) {
-
+    private fun actualizaTextViewCantidad(cantidadTextView: TextView, i: Int) {
+        var cantidadActual = cantidadTextView.text.toString().toInt()
+        cantidadActual += i
+        if (cantidadActual < 0) {
+            Toast.makeText(this, "La cantidad no puede ser negativa", Toast.LENGTH_SHORT).show()
+        } else {
+            cantidadTextView.text = cantidadActual.toString()
+        }
     }
 
-    public enum class Pizzas(val nombre:String,val precio: Float) {
-        QuesoPepperoni("QuesoPepperoni",13.5f),
-        Margarita("Margarita",10.2f),
-        Hawaiana("Hawaiana",13.5f),
-        Pollo("Pollo",15.1f),
-        Napolitana("Napolitana",18f),
-        QuatroQuesos("QuatroQuesos",17f),
-        SalmónAhuQuesoCrema("SalmónAhuQuesoCrema",20f),
-        Carbonara("Carbonara",15f),
-        Barbacoa("Barbacoa",15.5f),
-        Calzone("Calzone",19f);
 
-    }
 }
